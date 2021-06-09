@@ -10,7 +10,7 @@ export default function Home({ products }) {
         <title>Amazon Clone</title>
       </Head>
 
-      <Header />
+      <Header products={products} />
 
       <main className='max-w-screen-2xl mx-auto'>
         {/* Banner */}
