@@ -11,8 +11,8 @@ const stripePromise = loadStripe(process.env.stripe_public_key);
 
 function Checkout() {
   const items = useSelector(selectItems);
-  const [session] = useSession();
   const total = useSelector(selectTotal);
+  const [session] = useSession();
 
   const createCheckoutSession = async () => {
     const stripe = await stripePromise;
@@ -31,7 +31,7 @@ function Checkout() {
     if (result.error) alert(result.error.message);
   };
   return (
-    <div>
+    <div className='bg-gray-100'>
       <Header />
 
       <main className='lg:flex max-w-screen-2xl mx-auto'>

@@ -10,3 +10,12 @@ const firebaseConfig = {
   appId: '1:28879271451:web:914470ce9acb762d482abe',
   measurementId: 'G-2F2YJK2DG4',
 };
+
+
+const app = !firebase.apps.length
+ ? firebase.initializeApp(firebaseConfig)
+  : firebase.app();
+
+const db = app.firestore()
+
+export default db
